@@ -1,4 +1,11 @@
-
+/*
+ Author: Makan Fofana
+ Course: CSCI-136
+ Instructor: ]]
+ Assignment: Lab5A
+ 
+ Asks the user to input two integer numbers and print Yes if the first number is divisible by the second, otherwise print No. It should return true if n is a prime, otherwise return false. Change the main function to test your new code.
+*/
 
 #include <iostream>
 
@@ -41,12 +48,21 @@ bool isPrime(int n) { // Prime number determination
     
 }
 
-//int nextPrime(int n){
-//    
-//    isPrime(<#int n#>)
-//
-//    return 0;
-//}
+int nextPrime(int n){
+    
+    int newValue = 0;
+    int x = 200;
+    
+        for (int i = 1; i < x ; i++) {
+            newValue = n + i;
+            if (isPrime(newValue)) {
+                return newValue;
+            }
+        }
+    
+    
+    return newValue;
+}
 
 
 
@@ -68,13 +84,15 @@ int main() {
 //    //    }
 //
     
-    if (isPrime(a)) {
-        cout << true << endl;
-    } else {
-        cout << false << endl;
-        
-    }
+//    if (isPrime(a)) {
+//        cout << true << endl;
+//    } else {
+//        cout << false << endl;
+//
+//    }
 
+   cout << "Here it is " << nextPrime(a) << endl;
+    
     
     return 0;
 }
